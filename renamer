@@ -35,12 +35,11 @@ def main():
         offset = count + int(args.offset)
         output = args.output + str(offset).zfill(2) + "." + args.extension
         if (os.path.isfile(output)):
-            print("Output file " + output + " already exists, aborting")
+            print("Output file " + output + " already exists, cancelling run")
             exit()
         elif (not os.path.isfile(infile)):
-            print("Input file " + infile + " does not exist, aborting")
+            print("Input file " + infile + " does not exist, cancelling run")
             exit()
-    print "Pre-check passed"
 
     for file in os.listdir(args.dir):
         if args.prefix not in file:
@@ -49,7 +48,9 @@ def main():
         infile = args.prefix + str(count).zfill(2) + "." + args.extension
         offset = count + args.offset
         output = args.output + str(offset).zfill(2) + "." + args.extension
+
         print "Renaming " + infile + " to " + output
+
         if (os.path.isfile(output)):
             print("Output file " + output + " already exists, aborting")
             exit()
