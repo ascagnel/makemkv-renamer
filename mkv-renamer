@@ -6,7 +6,7 @@ import argparse
 description = "Rename the output from MakeMKV. (C) 2015 Andrew Scagnelli"
 add_help = "The input prefix to change (eg title in title00.mkv)"
 output_help = "The output prefix"
-offset_help = "The offset between the input and output files."
+offset_help = "The offset between the input and output files (the first value to be output)."
 start_help = "The value to start counting from."
 dir_help = "The directory to loop through."
 extension_help = "File extension to monitor."
